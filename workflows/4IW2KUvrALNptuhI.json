@@ -1,0 +1,66 @@
+{
+  "id": "4IW2KUvrALNptuhI",
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "86b28caf-58ab-4a10-a7f1-10d706c95127",
+      "name": "When chat message received",
+      "webhookId": "b1ffb173-51d2-4a37-9a75-e13351eb4171"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5e4b2af4-2220-4767-b203-9b2b913d3e86",
+              "name": "={{ $vars.ABCD }}",
+              "value": "=",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        220,
+        0
+      ],
+      "id": "359b3f16-f8ea-4114-ac84-ee2d64c9bba4",
+      "name": "Edit Fields"
+    }
+  ],
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "triggerCount": 0,
+  "versionId": "18d6264f-5b05-4c67-b1b4-ae1e172b4e26",
+  "owner": {
+    "type": "personal",
+    "personalEmail": "fehraraujo@gmail.com"
+  }
+}
